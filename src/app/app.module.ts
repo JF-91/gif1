@@ -2,13 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { GifsModule } from './gifs/gifs.module';
+import { SharedModule } from './shared/shared.module';
+
+//este es para hacer peticiones api con angular ,en serivicos
+import {HttpClientModule} from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    HttpClientModule,
+    GifsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
